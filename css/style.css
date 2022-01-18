@@ -1,0 +1,623 @@
+/* Variable declaration */
+
+:root {
+    --pc: rgb(1, 253, 1);
+}
+
+/* CSS basic reset */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+/* General styling */
+
+html {
+    font-size: 90%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #444;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--pc);
+    border-radius: 5rem;
+}
+
+body {
+    background: #222;
+}
+
+section {
+    padding: 2rem 16%;
+    overflow-x: hidden;
+}
+
+/* Buttons styling */
+.btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.8rem 3rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--pc);
+    color: #333;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.btn:hover {
+    background: green;
+}
+
+/* Heading styling */
+
+.headings {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.headings span {
+    color: var(--pc);
+    text-transform: uppercase;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+#header .logo img {
+    width: 70px;
+}
+
+#header .navbar a {
+    font-size: 1.5rem;
+    color: var(--pc);
+    margin-right: 1.5rem;
+    transition: all 1.5s;
+    text-transform: Capitalize;
+}
+
+#header .navbar a:hover {
+    color: green;
+}
+
+/* Hamburger menu */
+
+#menu-bar {
+    font-size: 3rem;
+    color: var(--pc);
+    cursor: pointer;
+    display: none;
+}
+
+/* Home styling */
+
+.home {
+    width: 80%;
+    margin: auto;
+}
+
+.home .content {
+    text-align: center;
+    padding-top: 8rem;
+    margin: 5rem auto;
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    animation-name: MoveInLeft;
+    animation-duration: 5s;
+}
+
+@keyframes MoveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-110px);
+    }
+    80%{
+        transform: translateX(15px);
+    }
+   
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.home .content h3 span {
+    color: var(--pc);
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 20rem;
+    width: 20rem;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Services  section styling */
+
+.service {
+    padding: 1.2rem;
+}
+
+.service .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.service .box-container .box {
+    border-radius: 0.5rem;
+    background: #333;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.service .box-container .box i {
+    line-height: 3rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    padding: 0.8rem;
+    background: var(--pc);
+    color: whitesmoke;
+}
+
+.service .box-container .box h3 {
+    font-size: 2rem;
+    color: whitesmoke;
+    padding: 1rem 0;
+}
+
+.service .box-container .box p {
+    font-size: 1.5rem;
+    color: gray;
+    line-height: 1.8;
+}
+
+/*  About section styling */
+.about {
+    padding: 0.5rem;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    padding: 1rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1rem solid #333;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+/* Event section styling */
+
+.event {
+    padding: 0.5rem;
+}
+
+.event .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.event .box-container .box {
+    position: relative;
+    border: 1rem solid #333;
+    border-radius: 0.5rem;
+    height: 25rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.event .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.event .box-container .box:hover img {
+    transform: scale(1.1);
+    filter: grayscale();
+}
+
+.event .box-container .box .title {
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: whitesmoke;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    transition: all 0.8s;
+}
+
+.event .box-container .box:hover .title {
+    top: 0;
+}
+
+.event .box-container .box .icons {
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    transition: all 0.8s;
+}
+
+.event .box-container .box:hover .icons {
+    bottom: 0;
+}
+
+.event .box-container .box .icons a {
+    font-size: 1.3rem;
+    margin: 3rem 1rem;
+    color: var(--pc);
+    transition: all 0.8s;
+}
+
+.event .box-container .box .icons a:hover {
+    color: green;
+}
+
+/* Plan section styling */
+.plan{
+    padding: 1.5rem;
+}
+
+.plan .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 0.5rem;
+}
+
+.plan .box-container .box{
+    padding:  0.5rem 0;
+    background: #333;
+    border-radius: 0.5rem;
+    text-align: center;  
+    transition: all 0.5s;
+}
+
+.plan .box-container .box:hover{
+    transform: scale(1.03);
+}
+
+.plan .box-container .box .title{
+    background: var(--pc);
+    color: whitesmoke;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+}
+
+.plan .box-container .box .price{
+    color: var(--pc);
+    padding: 1.5rem 0;
+    font-size: 3rem;
+}
+
+.plan .box-container .box ul{
+    list-style: none;
+    padding: 1rem;
+}
+
+.plan .box-container .box  ul li{
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: #eee;
+}
+.plan .box-container .box  ul li i{
+    color:  var(--pc);
+    padding-right: 0.5rem;
+}
+
+/* Review section styling */
+
+.review{
+    padding: 0 2rem;
+}
+
+ .review .review-slider{
+    overflow-x: hidden;
+}
+
+.review .box{
+    border-radius: 0.5rem;
+    background: #333;
+}
+
+.review .box .user{
+    display: flex;
+    text-align: center;
+    gap:1.5rem;
+    padding-bottom: 1rem;
+}
+
+.review .box .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box .user h3{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    padding-top: 3rem;
+}
+
+.review .box .user span{
+    color: var(--pc);
+    font-size: 1.2rem;
+}
+
+.review .box p{
+    line-height: 2;
+    color: #eee;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+
+/* Contact section styling */
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    background: #333;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.7rem 0;
+    font-size: 1.4rem;
+    color: #fff;
+ 
+}
+
+.contact form .input-box input::placeholder,
+.contact form textarea::placeholder{
+    color: #fff;
+    text-transform: capitalize;   
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus{
+  background-color:var(--pc); 
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+
+/* Footer styling */
+
+.footer{
+   background: #333;
+   margin: 0 auto;
+}
+
+.footer .box-container .box{
+    text-align: center;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 0.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    color: var(--pc)
+}
+
+.footer .box-container .box a i{
+    padding-right: 0.5rem;
+    color: var(--pc);
+    transition: all 0.5s;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 1rem;
+    color: green;
+}
+
+/* Theme toggler styling */
+.theme-toggler{
+    position: fixed;
+    top: 10rem;
+    left:-10rem;
+    background: #555;
+    z-index: 30;
+    width: 10rem;
+    text-align: center;
+}
+
+.theme-toggler h3{
+    color: whitesmoke;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.theme-toggler .buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.2rem;
+}
+
+.theme-toggler .buttons .theme-btn{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.theme-toggler .toggle-btn{
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    padding: 1rem 1rem;
+    background: #333;
+    cursor: pointer;
+    
+}
+.theme-toggler .toggle-btn i{
+    color: white;
+    font-size: 1rem;
+}
+
+.theme-toggler.active{
+    left: 0.5rem;
+}
+
+
+/* Media query for mobile compitability */
+
+@media(max-width:991px) {
+    html {
+        font-size: 60%;
+    }
+    #header {
+        padding: 1.5rem 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-bar {
+        display: initial;
+    }
+    #header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 0.1rem solid #222;
+        background: #333;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    #header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+    }
+    .icon-cancel {
+        transform: rotate(180deg);
+    }
+    #header .navbar a {
+        display: flex;
+        background: #222;
+        border-radius: 0.6rem;
+        padding: 1.5rem;
+        margin: 1.3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .contact form .input-box input{
+        width: 100%;
+    }
+
+    .footer .box-container .box{
+        text-align: center;
+    }
+}
